@@ -1,0 +1,375 @@
+body {
+  font-family: "Indie Flower", cursive;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix {
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  background-image: url(../img/cropped.jpg);
+  background-position: center;
+  transition: 2s ease-out;
+}
+.container .header {
+  color: rgba(255, 255, 255, 0.877);
+  font-size: 3rem;
+  margin: 2rem;
+  padding: 2rem;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.445) 0%, rgba(0, 249, 255, 0) 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.container .scoreContainer {
+  height: 86px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  transition: 2s ease-out;
+}
+.container .scoreContainer .pScore {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.445);
+  margin-left: 9rem;
+  border-radius: 5px;
+  color: rgb(77, 77, 77);
+  font-size: 2.5rem;
+  padding: 0 1.5rem 0 1.5rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.712);
+  transition: 2s ease-out;
+}
+.container .scoreContainer .roundCounter {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 189px;
+  background-color: rgba(255, 255, 255, 0.445);
+  border-radius: 5px;
+  color: rgb(77, 77, 77);
+  font-size: 2.5rem;
+  padding: 0 1.5rem 0 1.5rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.712);
+  margin-bottom: 1.5rem;
+  transition: 2s ease-out;
+}
+.container .scoreContainer .cScore {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.445);
+  margin-right: 9rem;
+  border-radius: 5px;
+  color: rgb(77, 77, 77);
+  font-size: 2.5rem;
+  padding: 0 1.5rem 0 1.5rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.712);
+  transition: 2s ease-out;
+}
+.container .gameUi {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .gameUi .userAnimation {
+  -webkit-animation-name: test1;
+          animation-name: test1;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+@-webkit-keyframes test1 {
+  0% {
+    left: -300px;
+    top: 0px;
+    transform: rotate(0deg);
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+    transform: rotate(360deg);
+  }
+}
+@keyframes test1 {
+  0% {
+    left: -300px;
+    top: 0px;
+    transform: rotate(0deg);
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+    transform: rotate(360deg);
+  }
+}
+.container .gameUi .compAnimation {
+  -webkit-animation-name: test2;
+          animation-name: test2;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  display: block;
+  z-index: 9999;
+}
+@-webkit-keyframes test2 {
+  0% {
+    left: 300px;
+    bottom: 0px;
+    transform: rotate(0deg);
+  }
+  100% {
+    left: 0;
+    bottom: 0px;
+    transform: rotate(-360deg);
+  }
+}
+@keyframes test2 {
+  0% {
+    left: 300px;
+    bottom: 0px;
+    transform: rotate(0deg);
+  }
+  100% {
+    left: 0;
+    bottom: 0px;
+    transform: rotate(-360deg);
+  }
+}
+.container .gameUi .userChoice {
+  -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+          clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+  height: 20rem;
+  width: 10rem;
+  background-color: rgba(255, 255, 255, 0.445);
+  border: 0.3rem solid rgba(255, 255, 255, 0.712);
+  color: rgba(255, 255, 255, 0.945);
+  font-size: 500%;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.699);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 2rem;
+}
+.container .gameUi .userChoice .cursorP {
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+.container .gameUi .userChoice .cursorP:hover {
+  color: rgba(238, 236, 236, 0.945);
+}
+.container .gameUi .displayPosLeft {
+  position: absolute;
+  left: 40%;
+  font-size: 4.5rem;
+  text-shadow: 0.8px 0.8px rgba(0, 0, 0, 0.699);
+  transition: 1s;
+}
+.container .gameUi .displayPosLeft .scissors {
+  transform: rotate(160deg);
+  padding-right: 1rem;
+  margin-top: -2rem;
+  color: rgba(255, 255, 255, 0.945);
+  padding-top: 10rem;
+}
+.container .gameUi .rock {
+  transform: rotate(45deg);
+  padding-left: 0.5rem;
+  color: rgba(255, 255, 255, 0.945);
+}
+.container .gameUi .paper {
+  transform: rotate(5deg);
+  padding-right: 2rem;
+  color: rgba(255, 255, 255, 0.945);
+}
+.container .gameUi .scissors {
+  transform: rotate(160deg);
+  padding-right: 1rem;
+  margin-top: -2rem;
+  color: rgba(255, 255, 255, 0.945);
+}
+.container .gameUi .userChoiceRock {
+  opacity: 0;
+}
+.container .gameUi .userChoicePaper {
+  opacity: 0;
+}
+.container .gameUi .userChoiceScissors {
+  opacity: 0;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+}
+.container .gameUi .result {
+  color: white;
+  height: 10rem;
+  width: 25rem;
+  background-color: rgba(255, 255, 255, 0.445);
+  margin-right: 0;
+  -webkit-clip-path: polygon(4% 0%, 96% 0%, 100% 45%, 100% 55%, 96% 100%, 4% 100%, 0% 55%, 0% 45%);
+          clip-path: polygon(4% 0%, 96% 0%, 100% 45%, 100% 55%, 96% 100%, 4% 100%, 0% 55%, 0% 45%);
+  font-size: 3rem;
+  border-top: 1px white solid;
+  border-bottom: 1px white solid;
+  transition: 0.3s;
+  position: relative;
+}
+.container .gameUi .result .resultDisplay {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .gameUi .result .resultDisplay .resultUser {
+  height: 100%;
+  width: 50%;
+  margin-left: 2rem;
+  font-size: 200%;
+  color: rgba(255, 255, 255, 0.945);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 999;
+}
+.container .gameUi .result .resultDisplay .resultComp {
+  height: 100%;
+  width: 50%;
+  margin-right: 3rem;
+  color: rgba(255, 255, 255, 0.945);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.container .gameUi .result .wintest {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 3rem;
+  left: 1rem;
+  opacity: 0;
+  transition: 1s ease-out;
+}
+.container .gameUi .result .loosetest {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 3rem;
+  left: 1rem;
+  opacity: 0;
+  transition: 1s ease-out;
+}
+.container .gameUi .result .compRock {
+  transform: rotate(-45deg);
+  color: rgba(255, 255, 255, 0.945);
+  margin-bottom: -1rem;
+}
+.container .gameUi .result .compPaper {
+  transform: rotate(-5deg);
+  padding-top: 0.5rem;
+  padding-left: 3.5rem;
+  color: rgba(255, 255, 255, 0.945);
+}
+.container .gameUi .result .compScissors {
+  transform: rotate(-5deg);
+  color: rgba(255, 255, 255, 0.945);
+  margin-top: -0.3rem;
+  padding-bottom: 1rem;
+}
+.container .gameUi .result .displayPosRight {
+  position: absolute;
+  right: 40%;
+  font-size: 4.5rem;
+  text-shadow: 0.8px 0.8px rgba(0, 0, 0, 0.699);
+  transition: 1s;
+}
+.container .gameUi .result .compChoiceRock {
+  opacity: 0;
+}
+.container .gameUi .result .compChoicePaper {
+  opacity: 0;
+}
+.container .gameUi .result .compChoiceScissors {
+  opacity: 0;
+  padding-top: 1rem;
+}
+.container .gameUi .compChoice {
+  height: 20rem;
+  width: 10rem;
+  background-color: rgba(255, 255, 255, 0.445);
+  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+          clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  padding: 2rem;
+  margin: 2rem;
+  border: 0.3rem solid rgba(255, 255, 255, 0.712);
+  color: rgba(255, 255, 255, 0.945);
+  font-size: 500%;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.699);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.container .gameUi .compChoice .cursorP {
+  cursor: pointer;
+}
+.container .resetArea {
+  height: 4rem;
+  width: 100%;
+  position: relative;
+}
+.container .resetArea .cursorP {
+  cursor: pointer;
+}
+.container .resetArea .resetBtn {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.445);
+  color: black;
+  transform: rotate(2.5deg);
+  height: 2rem;
+  width: 6rem;
+  font-size: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.452);
+  right: 37%;
+}
+.container .resetArea .resetBtn:hover {
+  background-color: rgba(189, 189, 189, 0.774);
+  color: rgba(255, 255, 255, 0.61);
+  border: 0;
+  transition: 0.2s;
+}
+.container .resetArea .resetBtn:active {
+  background-color: rgba(255, 255, 255, 0.671);
+  color: rgba(77, 77, 77, 0.774);
+  transition: -0.2s;
+}/*# sourceMappingURL=stylesheet.css.map */

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R-P-S | Mit grafik</title>
+    <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+    <script src="https://kit.fontawesome.com/09ca86ed6f.js" crossorigin="anonymous"></script>
+    <script src="./js/javascript.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Indie+Flower&family=Open+Sans:wght@300;400;500;600;700;800&family=Play:wght@400;700&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-------------------------------------------------------Start Container--------------------------------------------------------------------->
+
+    <div class="container clearfix">
+        <!-------------------------------------------------------Start header--------------------------------------------------------------------->
+        <div class="header">Rock | Paper | Scissors</div>
+        <!-------------------------------------------------------Ende header--------------------------------------------------------------------->
+
+        <!-------------------------------------------------------Start Resultat & Runden Zähler--------------------------------------------------------------------->
+
+        <div class="scoreContainer">
+            <div class="pScore" id="RPSpScore">0</div>
+            <div class="roundCounter" id="RPSroundCounter">Round: 0</div>
+            <div class="cScore" id="RPScScore">0</div>
+        </div>
+
+        <!-------------------------------------------------------Ende Resultat & Runden Zähler--------------------------------------------------------------------->
+
+        <!-------------------------------------------------------Start Main Interface--------------------------------------------------------------------->
+        <div class="gameUi">
+
+            <!-------------------------------------------------------Start Spieler Auswahl == Runden Start / playRound function & Display--------------------------------------------------------------------->
+
+            <div class="userChoice">
+                <div>
+                    <div class="fa-regular fa-hand-back-fist rock cursorP" id="rock" onclick="userEvent('rock')">
+                    </div>
+                </div>
+                <div>
+                    <div class="fa-regular fa-hand paper cursorP" id="paper" onclick="userEvent('paper')">
+                    </div>
+                </div>
+                <div>
+                    <div class="fa-regular fa-hand-scissors scissors cursorP" id="scissors"
+                        onclick="userEvent('scissors')">
+                    </div>
+                </div>
+            </div>
+
+            <!-------------------------------------------------------Ende Spieler Auswahl--------------------------------------------------------------------->
+
+            <!-------------------------------------------------------Start Resultat, Runden ergebniss, gewinn & verlierer display--------------------------------------------------------------------->
+            <div class="result">
+                <div class="wintest" id="wintest">You won the game!</div>
+                <div class="loosetest" id="loosetest">You lost the game.</div>
+                <div class="resultDisplay">
+                    <div class="resultUser" id="resultUser">
+                        <div class="fa-regular fa-hand-back-fist rock displayPosLeft userChoiceRock"
+                            id="resultUserRock">
+                        </div>
+                        <div class="fa-regular fa-hand paper displayPosLeft userChoicePaper" id="resultUserPaper">
+                        </div>
+                        <div class="fa-regular fa-hand-scissors scissors displayPosLeft userChoiceScissors"
+                            id="resultUserScissors">
+                        </div>
+                    </div>
+                    <div class="resultComp" id="resultComp">
+                        <div class="fa-regular fa-hand-back-fist compRock displayPosRight compChoiceRock"
+                            id="resultCompRock">
+                        </div>
+                        <div class="fa-regular fa-hand compPaper displayPosRight compChoicePaper" id="resultCompPaper">
+                        </div>
+                        <div class="fa-regular fa-hand-scissors compScissors displayPosRight compChoiceScissors"
+                            id="resultCompScissors">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-------------------------------------------------------Ende Resultat, Runden ergebniss, gewinn & verlierer display--------------------------------------------------------------------->
+
+            <!-------------------------------------------------------Start Computer Auswahl--------------------------------------------------------------------->
+            <div class="compChoice">
+                <div>
+                    <div class="fa-regular fa-hand-back-fist compRock" id="compRock">
+                    </div>
+                </div>
+                <div>
+                    <div class="fa-regular fa-hand compPaper" id="compPaper">
+                    </div>
+                </div>
+                <div>
+                    <div class="fa-regular fa-hand-scissors compScissors" id="compScissors"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------------------------------------Ende Computer Auswahl--------------------------------------------------------------------->
+
+        <!-------------------------------------------------------Ende Main Interface--------------------------------------------------------------------->
+
+        <!-------------------------------------------------------Start Reset area button--------------------------------------------------------------------->
+        <div class="resetArea">
+            <button class="resetBtn cursorP" onclick="hardResetBtn()">Reset</button>
+        </div>
+        <!-------------------------------------------------------Ende Reset area button--------------------------------------------------------------------->
+    </div>
+    <!-------------------------------------------------------Ende Container--------------------------------------------------------------------->
+
+
+</body>
+
+
+</html>
